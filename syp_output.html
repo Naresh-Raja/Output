@@ -1,0 +1,734 @@
+<pre>
+<div id="top"><h3>Synposys Generic Technology Mapping </h3></div>
+<p><a href="#syprg_gyn">Report Gates</a><p>
+<p><a href="#syprt_gyn">Report Timing</a><p>
+<p><a href="#syprp_gyn">Report Power</a><p>
+<p><a href="#sypra_gyn">Report Area</a><p>
+<p><a href="#sypsch_gyn">Schematic</a><p>
+
+<span style="background-color:#3465A4"><font color="#EEEEEC"><b> user </b></font></span><span style="background-color:#EEEEEC"><font color="#555753"><b> user1 </b></font></span><span style="background-color:#D3D7CF"><font color="#555753"><b> DC </b></font></span>⭐dc_shell
+<h3>Synopsys Synthesis Technology Mapping</h3>
+<p><a href="#syprg">Report Gates</a><p>
+<p><a href="#syprt">Report Timing</a><p>
+<p><a href="#syprp">Report Power</a><p>
+<p><a href="#sypra">Report Area</a><p>
+<p><a href="#sypsch">Schematic</a><p>
+<span style="background-color:#3465A4"><font color="#EEEEEC"><b> user </b></font></span><span style="background-color:#EEEEEC"><font color="#555753"><b> user1 </b></font></span><span style="background-color:#D3D7CF"><font color="#555753"><b> DC </b></font></span>⭐dc_shell
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use &apos;-no_save&apos; simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version W-2024.09 for linux64 - Aug 28, 2024 
+
+                    Copyright (c) 1988 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity &amp; Diversity - Visit SolvNetPlus to read the &quot;Synopsys Statement on
+            Inclusivity and Diversity&quot; (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/user/.synopsys_dc_gui/preferences.tcl
+Current time:       Fri Nov  8 14:44:14 2024
+Hostname:           user1.nielitchennai.edu.in
+CPU Model:          13th Gen Intel(R) Core(TM) i7-13700
+CPU Details:        Cores = 24 : Sockets = 1 : Cache Size = 30720 KB : Freq = 2.10 GHz
+OS:                 Linux 4.18.0-425.3.1.el8.x86_64
+RAM:                 30 GB (Free  25 GB)
+Swap:                63 GB (Free  63 GB)
+Work Filesystem:    /home mounted to /dev/mapper/rhel-home
+Tmp Filesystem:     / mounted to /dev/mapper/rhel-root
+Work Disk:          316 GB (Free 182 GB)
+Tmp Disk:           316 GB (Free 112 GB)
+
+CPU Load: 0%, Ram Free: 25 GB, Swap Free: 63 GB, Work Disk Free: 182 GB, Tmp Disk Free: 112 GB
+source ./rm_setup/dc_setup.tcl
+RM-Info: Running script /home/user/Synopsys_file/DC/rm_setup/common_setup.tcl
+
+RM-Info: Completed script /home/user/Synopsys_file/DC/rm_setup/common_setup.tcl
+
+RM-Info: Running script /home/user/Synopsys_file/DC/rm_setup/dc_setup_filenames.tcl
+
+RM-Info: Completed script /home/user/Synopsys_file/DC/rm_setup/dc_setup_filenames.tcl
+
+RM-Info: Running script /home/user/Synopsys_file/DC/rm_setup/dc_setup.tcl
+
+RM-Info: Completed script /home/user/Synopsys_file/DC/rm_setup/dc_setup.tcl
+
+dc_shell&gt; set RTL_SOURCE_FILES ./../rtl/full_adder_rtl.v
+./../rtl/full_adder_rtl.v
+dc_shell&gt; define_design_lib WORK -path ./WORK
+1
+dc_shell&gt; analyze -format verilog ${RTL_SOURCE_FILES}
+Running PRESTO HDLC
+Compiling source file ./../rtl/full_adder_rtl.v
+Presto compilation completed successfully.
+Loading db file &apos;/home/user/Synopsys_file/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db&apos;
+Loading db file &apos;/usr/synopsys/syn/W-2024.09/libraries/syn/dw_foundation.sldb&apos;
+1
+dc_shell&gt; elaborate ${DESIGN_NAME}
+Loading db file &apos;/usr/synopsys/syn/W-2024.09/libraries/syn/gtech.db&apos;
+Loading db file &apos;/usr/synopsys/syn/W-2024.09/libraries/syn/standard.sldb&apos;
+  Loading link library &apos;saed32rvt_tt0p78vn40c&apos;
+  Loading link library &apos;gtech&apos;
+Running PRESTO HDLC
+
+Inferred memory devices in process in routine &apos;full_adder&apos; in file
+	 ./../rtl/full_adder_rtl.v&apos;.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      reg1_reg       | Flip-flop |   4   |  Y  | N  | None  | None  | N  |  10  |
+|      reg2_reg       | Flip-flop |   4   |  Y  | N  | None  | None  | N  |  10  |
+|      c_in_reg       | Flip-flop |   1   |  N  | N  | None  | None  | N  |  10  |
+|       SUM_reg       | Flip-flop |   4   |  Y  | N  | None  | None  | N  |  17  |
+|      C_out_reg      | Flip-flop |   1   |  N  | N  | None  | None  | N  |  17  |
+==================================================================================
+Presto compilation completed successfully. (full_adder)
+Module: full_adder, Ports: 15, Input: 10, Output: 5, Inout: 0
+Module: full_adder, Registers: 14, Async set/reset: 0, Sync set/reset: 0
+Information: Module report end. (ELAB-965)
+Error: This site is not licensed for &apos;Design-Compiler-NXT-FuSa&apos;. (SEC-51)
+Elaborated 1 design.
+Current design is now &apos;full_adder&apos;.
+1
+dc_shell&gt; start_gui
+<img src=/home/user/Documents/report/syp_syn_gui.png>
+<div id="sypsch_gyn"><img src=/home/user/Documents/report/syp_gen_sch.png></div>
+<p><a href="#top">Top</a></p>
+dc_shell&gt; Current design is &apos;full_adder&apos;.
+dc_shell&gt; Current design is &apos;full_adder&apos;.
+<div id="syprg_gyn">dc_shell&gt; report_cell</div>
+Information: Checking out the license &apos;DesignWare&apos;. (SEC-104)
+Module: DW01_add_width5, Ports: 17, Input: 11, Output: 6, Inout: 0
+Module: DW01_add_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Changed wire load model for &apos;DW01_add_width5&apos; from &apos;(none)&apos; to &apos;ForQA&apos;. (OPT-170)
+Information: Changed wire load model for &apos;*ADD_UNS_OP_5_1_5&apos; from &apos;(none)&apos; to &apos;ForQA&apos;. (OPT-170)
+Information: Changed wire load model for &apos;DW01_add_width5&apos; from &apos;(none)&apos; to &apos;ForQA&apos;. (OPT-170)
+Information: Changed wire load model for &apos;*ADD_UNS_OP_4_4_5&apos; from &apos;(none)&apos; to &apos;ForQA&apos;. (OPT-170)
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : cell
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:46:58 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+C_out_reg                 **SEQGEN**                      0.000000  n, u
+SUM_reg[0]                **SEQGEN**                      0.000000  n, u
+SUM_reg[1]                **SEQGEN**                      0.000000  n, u
+SUM_reg[2]                **SEQGEN**                      0.000000  n, u
+SUM_reg[3]                **SEQGEN**                      0.000000  n, u
+add_25                    *ADD_UNS_OP_4_4_5               0.000000  s, u
+add_25_2                  *ADD_UNS_OP_5_1_5               0.000000  s, u
+c_in_reg                  **SEQGEN**                      0.000000  n, u
+reg1_reg[0]               **SEQGEN**                      0.000000  n, u
+reg1_reg[1]               **SEQGEN**                      0.000000  n, u
+reg1_reg[2]               **SEQGEN**                      0.000000  n, u
+reg1_reg[3]               **SEQGEN**                      0.000000  n, u
+reg2_reg[0]               **SEQGEN**                      0.000000  n, u
+reg2_reg[1]               **SEQGEN**                      0.000000  n, u
+reg2_reg[2]               **SEQGEN**                      0.000000  n, u
+reg2_reg[3]               **SEQGEN**                      0.000000  n, u
+--------------------------------------------------------------------------------
+Total 16 cells                                            0.000000
+1
+Current design is &apos;full_adder&apos;.
+<p><a href="#top">Top</a></p>
+<div id="syprt_gyn">dc_shell&gt; report_timing</div>
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:47:12 2024
+****************************************
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: C_out_reg (rising edge-triggered flip-flop)
+  Endpoint: C_out (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  full_adder         ForQA                 saed32rvt_tt0p78vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  C_out_reg/clocked_on (**SEQGEN**)        0.00       0.00 r
+  C_out_reg/Q (**SEQGEN**)                 0.00       0.00 r
+  C_out (out)                              0.00       0.00 r
+  data arrival time                                   0.00
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+<p><a href="#top">Top</a></p>
+<div id="syprp_gyn">dc_shell&gt; report_power</div>
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:47:17 2024
+****************************************
+
+
+Library(s) Used:
+
+    gtech (File: /usr/synopsys/syn/W-2024.09/libraries/syn/gtech.db)
+
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+full_adder             ForQA             saed32rvt_tt0p78vn40c
+*ADD_UNS_OP_4_4_5      ForQA             saed32rvt_tt0p78vn40c
+DW01_add_width5        ForQA             saed32rvt_tt0p78vn40c
+*ADD_UNS_OP_5_1_5      ForQA             saed32rvt_tt0p78vn40c
+DW01_add_width5        ForQA             saed32rvt_tt0p78vn40c
+
+
+Global Operating Voltage = 0.78 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   0.0000 uW    (0%)
+  Net Switching Power  =  46.2717 nW  (100%)
+                         ---------
+Total Dynamic Power    =  46.2717 nW  (100%)
+
+Cell Leakage Power     =   0.0000 pW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000        2.1809e-02            0.0000        2.1809e-02  (  47.13%)
+combinational      0.0000        2.4463e-02            0.0000        2.4463e-02  (  52.87%)
+--------------------------------------------------------------------------------------------------
+Total              0.0000 uW     4.6272e-02 uW         0.0000 pW     4.6272e-02 uW
+1
+<p><a href="#top">Top</a></p>
+<div id="sypra_gyn">dc_shell&gt; report_area</div>
+ 
+****************************************
+Report : area
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:47:23 2024
+****************************************
+
+Library(s) Used:
+
+    gtech (File: /usr/synopsys/syn/W-2024.09/libraries/syn/gtech.db)
+
+Number of ports:                           73
+Number of nets:                           104
+Number of cells:                           32
+Number of combinational cells:             10
+Number of sequential cells:                14
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       3
+
+Combinational area:                  0.000000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:              34.897617
+
+Total cell area:                     0.000000
+Total area:                         34.897617
+
+Information: This design contains unmapped logic. (RPT-7)
+1
+
+<p><a href="#top">Top</a></p>
+Reading SDC version 2.2...
+Current design is &apos;full_adder&apos;.
+CPU Load: 1%, Ram Free: 25 GB, Swap Free: 63 GB, Work Disk Free: 182 GB, Tmp Disk Free: 112 GB
+Information: Checking out the license &apos;DesignWare&apos;. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | W-2024.09-DWBB_202409.0 |     *     |
+| Licensed DW Building Blocks        | W-2024.09-DWBB_202409.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 16                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 14                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing &apos;full_adder&apos;
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+Module: DW01_add_width5, Ports: 17, Input: 11, Output: 6, Inout: 0
+Module: DW01_add_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Processing &apos;full_adder_DW01_add_0&apos;
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     168.0      0.17       2.0      45.0                          
+    0:00:00     149.4      0.17       1.9      45.0                          
+    0:00:00     149.4      0.17       1.9      45.0                          
+    0:00:00     149.4      0.17       1.9      45.0                          
+    0:00:00     149.4      0.17       1.9      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     147.9      0.17       1.8      45.0                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     147.9      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+    0:00:00     177.6      0.17       1.8      45.0                          
+Loading db file &apos;/home/user/Synopsys_file/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db&apos;
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 1%, Ram Free: 25 GB, Swap Free: 63 GB, Work Disk Free: 182 GB, Tmp Disk Free: 112 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+Writing verilog file &apos;/home/user/Synopsys_file/DC/results/full_adder.mapped.v&apos;.
+Information: During the execution of write_icc2_files error messages were issued, please check icc2_files/write_icc2_files.log files. (DCT-228)
+1
+<div id="syprg">dc_shell&gt; report_cell</div>
+Information: Updating graph... (UID-83)
+ 
+****************************************
+Report : cell
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:15:55 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+C_out_reg                 DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+SUM_reg[0]                DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+SUM_reg[1]                DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+SUM_reg[2]                DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+SUM_reg[3]                DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+U4                        INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U5                        INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U6                        INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U7                        INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U8                        INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U9                        INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U10                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U11                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U12                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U13                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U14                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U15                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U16                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U17                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U18                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U19                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U20                       INVX4_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U21                       INVX1_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U22                       INVX0_RVT       saed32rvt_tt0p78vn40c
+                                                          1.270720  
+U23                       XNOR3X1_RVT     saed32rvt_tt0p78vn40c
+                                                          6.099456  
+U24                       XOR3X2_RVT      saed32rvt_tt0p78vn40c
+                                                          7.370176  
+U25                       NAND3X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.779008  
+U26                       XNOR3X1_RVT     saed32rvt_tt0p78vn40c
+                                                          6.099456  
+U27                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U28                       AO21X1_RVT      saed32rvt_tt0p78vn40c
+                                                          2.541440  
+U29                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U30                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U31                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U32                       AO21X1_RVT      saed32rvt_tt0p78vn40c
+                                                          2.541440  
+U33                       XOR3X2_RVT      saed32rvt_tt0p78vn40c
+                                                          7.370176  
+U34                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U35                       OR2X1_RVT       saed32rvt_tt0p78vn40c
+                                                          2.033152  
+U36                       NAND3X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.779008  
+U37                       NAND3X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.779008  
+U38                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U39                       AO22X1_RVT      saed32rvt_tt0p78vn40c
+                                                          2.541440  
+U40                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+U41                       NAND2X0_RVT     saed32rvt_tt0p78vn40c
+                                                          1.524864  
+c_in_reg                  DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg1_reg[0]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg1_reg[1]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg1_reg[2]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg1_reg[3]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg2_reg[0]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg2_reg[1]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg2_reg[2]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+reg2_reg[3]               DFFX1_RVT       saed32rvt_tt0p78vn40c
+                                                          6.607744  n
+--------------------------------------------------------------------------------
+Total 52 cells                                            177.646659
+1
+<p><a href="#top">Top</a></p>
+<div id="syprt">dc_shell&gt; report_timing</div>
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:16:48 2024
+****************************************
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: C_in (input port clocked by Clock)
+  Endpoint: c_in_reg (rising edge-triggered flip-flop clocked by Clock)
+  Path Group: Clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  full_adder         ForQA                 saed32rvt_tt0p78vn40c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock Clock (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.50       0.50 f
+  C_in (in)                                0.00       0.50 f
+  U4/Y (INVX4_RVT)                         0.18       0.68 r
+  U5/Y (INVX1_RVT)                         0.06       0.73 f
+  c_in_reg/D (DFFX1_RVT)                   0.01       0.75 f
+  data arrival time                                   0.75
+
+  clock Clock (rise edge)                  1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  clock uncertainty                       -0.30       0.70
+  c_in_reg/CLK (DFFX1_RVT)                 0.00       0.70 r
+  library setup time                      -0.12       0.58
+  data required time                                  0.58
+  -----------------------------------------------------------
+  data required time                                  0.58
+  data arrival time                                  -0.75
+  -----------------------------------------------------------
+  slack (VIOLATED)                                   -0.17
+
+
+1
+<p><a href="#top">Top</a></p>
+<div id="syprp">dc_shell&gt; report_power</div>
+Loading db file &apos;/home/user/Synopsys_file/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db&apos;
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:17:11 2024
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /home/user/Synopsys_file/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+
+Operating Conditions: tt0p78vn40c   Library: saed32rvt_tt0p78vn40c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+full_adder             ForQA             saed32rvt_tt0p78vn40c
+
+
+Global Operating Voltage = 0.78 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  59.0532 uW   (96%)
+  Net Switching Power  =   2.3231 uW    (4%)
+                         ---------
+Total Dynamic Power    =  61.3764 uW  (100%)
+
+Cell Leakage Power     = 410.9106 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network     50.8908            0.0000            0.0000           50.8908  (  82.36%)  i
+register           2.8745            0.8368        2.8477e+05            3.9961  (   6.47%)
+  (   0.00%)
+  (  11.17%)
+--------------------------------------------------------------------------------------------------
+Total             59.0532 uW         2.3231 uW     4.1091e+05 pW        61.7873 uW
+1
+<p><a href="#top">Top</a></p>
+<div id="sypra">dc_shell&gt; report_area</div>
+ 
+****************************************
+Report : area
+Design : full_adder
+Version: W-2024.09
+Date   : Fri Nov  8 14:17:19 2024
+****************************************
+
+Library(s) Used:
+
+    saed32rvt_tt0p78vn40c (File: /home/user/Synopsys_file/ref/lib/stdcell_rvt/saed32rvt_tt0p78vn40c.db)
+
+Number of ports:                           15
+Number of nets:                            68
+Number of cells:                           52
+Number of combinational cells:             38
+Number of sequential cells:                14
+Number of macros/black boxes:               0
+Number of buf/inv:                         19
+Number of references:                      11
+
+Combinational area:                 85.138240
+Buf/Inv area:                       31.005569
+Noncombinational area:              92.508419
+Macro/Black Box area:                0.000000
+Net Interconnect area:               9.679111
+
+Total cell area:                   177.646659
+Total area:                        187.325771
+1
+dc_shell&gt; 
+<p><a href="#top">Top</a></p>
+<div id="sypsch"><img src=/home/user/Documents/report/syp_sch.png></div>
+<p><a href="#top">Top</a></p>
+</pre>
